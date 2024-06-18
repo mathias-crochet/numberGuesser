@@ -1,18 +1,14 @@
-backend/node_modules/
-backend/build/
-backend/dist/
+*/node_modules/
+*/build/
+*/dist/
 backend/scores.json
 
-frontend/node_modules/
-frontend/build/
-frontend/dist/
 
 # Secret files
-*.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+*.env.local
+*.env.development.local
+*.env.test.local
+*.env.production.local
 
 # VS Code
 .vscode/
