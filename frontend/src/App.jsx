@@ -19,7 +19,7 @@ const NumberGuesser = () => {
 
     const fetchScores = async () => {
         try {
-            const response = await axios.get('${process.env.REACT_APP_BACKEND_URL}/scores');
+            const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/scores`);
             const sortedScores = response.data.sort((a, b) => a.attempts - b.attempts);
             const topScores = sortedScores.slice(0, 5);
             setScores(topScores);
@@ -30,7 +30,7 @@ const NumberGuesser = () => {
 
     const handleGuess = async () => {
         try {
-            const response = await axios.post('${process.env.REACT_APP_BACKEND_URL}/guess', { guess: parseInt(guess), username, attempts: attempts + 1 });
+            const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/guess`, { guess: parseInt(guess), username, attempts: attempts + 1 });
             setAttempts(attempts + 1);
 
             if (response.data.hint === 'correct') {
@@ -55,7 +55,7 @@ const NumberGuesser = () => {
 
     const handleNewGame = async () => {
         try {
-            await axios.get('${process.env.REACT_APP_BACKEND_URL}/new-game');
+            await axios.get(`${process.env.REACT_APP_BACKEND_URL}/new-game`);
             setIcon(null)
             setAttempts(0);
             setGuess('');
