@@ -37,9 +37,9 @@ const NumberGuesser = () => {
                 setIcon(faCheck);
                 setGameOver(true);
                 await fetchScores();
-            } else if (response.data.hint === '+') {
+            } else if (response.data.hint === 'higher') {
                 setIcon(faPlus);
-            } else if (response.data.hint === '-') {
+            } else if (response.data.hint === 'lower') {
                 setIcon(faMinus);
             }
         } catch (error) {
