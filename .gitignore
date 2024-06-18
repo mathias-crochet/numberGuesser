@@ -1,6 +1,7 @@
 backend/node_modules/
 backend/build/
 backend/dist/
+backend/scores.json
 
 frontend/node_modules/
 frontend/build/
@@ -15,3 +16,4 @@ frontend/dist/
 
 # VS Code
 .vscode/
+
